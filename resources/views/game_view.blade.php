@@ -22,31 +22,31 @@
 </head>
 <body class="antialiased">
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-    @if(request()->session())
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                <span  class="text-sm text-gray-700 dark:text-gray-500 ">{{$data['name']}}</span>
+{{--    @if(request()->session())--}}
+{{--        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">--}}
+{{--            <span  class="text-sm text-gray-700 dark:text-gray-500 ">{{$data['name']}}</span>--}}
 
-                <span  class="ml-4 text-sm text-gray-700 dark:text-gray-500 ">{{$data['email']}}</span>
-        </div>
-    @else
-        <h1>Login First</h1>
-    @endif
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+{{--            <span  class="ml-4 text-sm text-gray-700 dark:text-gray-500 ">{{$data['email']}}</span>--}}
+{{--        </div>--}}
+{{--    @else--}}
+{{--        <h1>Login First</h1>--}}
+{{--    @endif--}}
+{{--    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">--}}
 
-            @if(request()->session())
-            <h3>User Name : {{$data['name']}}</h3>
-            <h3>User email : {{$data['email']}}</h3>
-            <h3>User Access :</h3> <p>{{$access_token}}</p>
-            <iframe id="inlineFrameExample"
-                title="Inline Frame Example"
-                width="800"
-                height="800"
-                src="https://server.ggbettings.com/">
-        </iframe>
-        @else
-             <h1>Login First</h1>
-        @endif
-    </div>
+{{--        @if(request()->session())--}}
+{{--            <h3>User Name : {{$data['name']}}</h3>--}}
+{{--            <h3>User email : {{$data['email']}}</h3>--}}
+{{--            <h3>User Access :</h3> <p>{{$access_token}}</p>--}}
+{{--            <iframe id="inlineFrameExample"--}}
+{{--                    title="Inline Frame Example"--}}
+{{--                    width="800"--}}
+{{--                    height="800"--}}
+{{--                    src="https://server.ggbettings.com/">--}}
+{{--            </iframe>--}}
+{{--        @else--}}
+{{--            <h1>Login First</h1>--}}
+{{--        @endif--}}
+{{--    </div>--}}
 
 </div>
 </body>

@@ -17,14 +17,18 @@ use Illuminate\Support\Str;
 */
 use \App\Http\Controllers\ClientController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/sso_login',[ClientController::class, 'authCallback'])->name('sso.login');
 Route::get('/callback',[ClientController::class, 'tokenGenerate'])->name('token.generate');
 Route::get('/authuser',[ClientController::class, 'getUser'])->name('get.user');
 
-Auth::routes();
+Route::get('/game_view',function (){
+    return view('admin.app');
+});
+Auth::routes(['register'=>false,'reset'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
