@@ -19,7 +19,7 @@ use App\Http\Controllers\PlaceBetController;
 
 
 Route::post('/store',[BetController::class, 'store'])->name('store');
-Route::put('/update_bet',[BetController::class, 'updateBet'])->name('update.bet');
+Route::post('/update_bet',[BetController::class, 'updateBet'])->name('update.bet');
 Route::get('/get_bet/{id}',[BetController::class, 'getBet'])->name('get.bet');
 Route::get('/get_bet',[BetController::class, 'getAll'])->name('get.all');
 Route::delete('/detele_all_bets',[BetController::class, 'deteleAllBets'])->name('detele.all.bets');
